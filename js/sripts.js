@@ -111,7 +111,7 @@ button.onclick = function geoFindMe() {
   let magY = document.getElementById("magnetoY");
   let magZ = document.getElementById("magnetoZ");
   magX.innerHTML= navigator.geolocation;
-  magY.innerHTML= sensors.Magnetometer;
+  magY.innerHTML= navigator.magnetometer;
 
 
   if (!navigator.geolocation){
