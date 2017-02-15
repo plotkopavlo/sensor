@@ -139,3 +139,14 @@ button.onclick = function geoFindMe() {
 
 
 }
+let sensor = new Magnetometer();
+sensor.start();
+  let magX = document.getElementById("magnetoX");
+  let magY = document.getElementById("magnetoY");
+  let magZ = document.getElementById("magnetoZ");
+ 
+sensor.onchange = () => {
+    MagX.innerHTML ="Magnetic field along the X-axis " + sensor.x;
+    MagY.innerHTML ="Magnetic field along the Y-axis " + sensor.y;
+    MagZ.innerHTML ="Magnetic field along the Z-axis " + sensor.z;
+};
